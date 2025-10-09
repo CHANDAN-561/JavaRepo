@@ -42,6 +42,3 @@ out/
 bin/
 build/
 target/
-
-# Ignore unfinished work
-stocksBuySell.java
