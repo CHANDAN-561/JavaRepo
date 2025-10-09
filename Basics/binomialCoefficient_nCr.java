@@ -1,7 +1,12 @@
+
+package Basics;
+
 import java.util.Scanner;
+
 public class binomialCoefficient_nCr {
 	public static int factorial(int n) {
-		if (n == 1 || n == 0) return 1;
+		if (n == 1 || n == 0)
+			return 1;
 		else {
 			return n * factorial(n - 1);
 		}
@@ -21,7 +26,7 @@ public class binomialCoefficient_nCr {
 		int n = sc.nextInt();
 		System.out.print("Enter r: ");
 		int r = sc.nextInt();
-		System.out.print("Binomial Coefficient is: " + BinCoeff (n, r));
+		System.out.print("Binomial Coefficient is: " + BinCoeff(n, r));
 		sc.close();
 	}
 }

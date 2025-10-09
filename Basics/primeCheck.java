@@ -1,4 +1,7 @@
+package Basics;
+
 import java.util.Scanner;
+
 public class primeCheck {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -9,7 +12,7 @@ public class primeCheck {
 		if (n <= 1) {
 			System.out.println("Number should be > 1.");
 		} else {
-			for (int i = 2; i < Math.sqrt (n); i++) {
+			for (int i = 2; i < Math.sqrt(n); i++) {
 				if (n % i == 0) {
 					isPrime = false;
 				}
