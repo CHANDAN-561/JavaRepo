@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Scanner;
 
-class MaxSubArraySum_Prefix {
+class maxSubArraySum_Prefix {
     public static void printSubArraySum(int numbers[]) {
         int sum, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
         int prefixSum[] = new int[numbers.length];
