@@ -45,5 +45,4 @@ target/
 
 TEST.java
 Main.java
-printArray2D.java
 rotateArrayByKPosition.java
