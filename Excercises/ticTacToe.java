@@ -28,10 +28,11 @@ public class ticTacToe {
         if (board[x][y] == ' ') {
             board[x][y] = turn;
             printBoard(board);
-            return true;
+            return false;
         } else {
             System.out.println("\n\nSpace already occupied!!");
-            return false;
+            printBoard (board);
+            return true;
         }
     }
 
@@ -40,7 +41,6 @@ public class ticTacToe {
             return true;
         } else {
             System.out.println("Invalid move!! Try again...");
-            printBoard (board);
             return false;
         }
     }
@@ -60,7 +60,6 @@ public class ticTacToe {
     public static void main(String[] args) {
         System.out.println("\nLet's play tic tac toe");
 
-
         int x, y;
         printBoard(board);
 
@@ -70,7 +69,7 @@ public class ticTacToe {
                     System.out.println("\nTurn X");
                     x = getUserInput("row");
                     y = getUserInput("column");
-                } while (!updateBoard (board, x, y, 'X'));
+                } while (updateBoard (board, x, y, 'X'));
 
                 if (isWin(board, 'X')) {
                     System.out.println("\n\nX wins!!");
@@ -81,7 +80,7 @@ public class ticTacToe {
                     System.out.println("\nTurn O");
                     x = getUserInput("row");
                     y = getUserInput("column");
-                } while (!updateBoard (board, x, y, 'O'));
+                } while (updateBoard (board, x, y, 'O'));
 
                 if (isWin(board, 'O')) {
                     System.out.println("\n\nO wins!!");
