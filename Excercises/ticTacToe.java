@@ -49,7 +49,7 @@ public class ticTacToe {
         int x;
         do {
             System.out.print("Enter " + inputDesire + " number: ");
-            x = input.nextInt();
+            x = input.nextInt() - 1;
         } while (!isValidMove(board.length, x));
         return x;
     }
