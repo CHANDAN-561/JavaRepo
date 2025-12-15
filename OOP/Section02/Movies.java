@@ -1,5 +1,5 @@
 package OOP.Section02;
 
-public class Movies
-{
+public class Movies {
+    private int x;
 }
