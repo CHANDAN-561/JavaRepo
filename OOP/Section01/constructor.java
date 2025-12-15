@@ -1,6 +1,4 @@
-package OOP;
-
-import java.util.*;
+package OOP.Section01;
 
 public class constructor {
     public static void main (String[] args) {

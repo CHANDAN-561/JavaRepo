@@ -1,6 +1,4 @@
-package OOP;
-
-import java.util.Arrays;
+package OOP.Section01;
 
 public class Dealership {
 
