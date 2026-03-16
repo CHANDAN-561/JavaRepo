@@ -1,4 +1,4 @@
-package OOP.Section01;
+package OOP.ClassObj.Section01;
 
 import java.util.Arrays;
 
@@ -14,17 +14,17 @@ public class Car {
         this.price = price;
         this.year = year;
         this.color = color;
-        this.parts = Arrays.copyOf (parts, parts.length);
+        this.parts = Arrays.copyOf(parts, parts.length);
     }
 
-    //copy constructor
+    // copy constructor
 
-    public Car (Car source) {
+    public Car(Car source) {
         this.make = source.make;
         this.price = source.price;
         this.year = source.year;
         this.color = source.color;
-        this.parts = Arrays.copyOf (source.parts, source.parts.length);
+        this.parts = Arrays.copyOf(source.parts, source.parts.length);
     }
 
     // setter methodes
@@ -45,8 +45,8 @@ public class Car {
         this.color = color;
     }
 
-    public void setParts (String[] parts) {
-        this.parts = Arrays.copyOf (parts, parts.length);
+    public void setParts(String[] parts) {
+        this.parts = Arrays.copyOf(parts, parts.length);
     }
 
     // getter methodes
@@ -68,34 +68,37 @@ public class Car {
     }
 
     public String[] getParts() {
-        return Arrays.copyOf (parts, parts.length);
+        return Arrays.copyOf(parts, parts.length);
     }
 
-
-    public void buyCar () {
-        System.out.println("Excellent choice!!. The " + this.getYear() + " " + this.getColor() + " " + this.getMake() + " is a great pick for " + this.getPrice() + " $");
+    public void buyCar() {
+        System.out.println("Excellent choice!!. The " + this.getYear() + " " + this.getColor() + " " + this.getMake()
+                + " is a great pick for " + this.getPrice() + " $");
     }
 
-    /*The below method exists in the "Object.java" file by default, And when we try to print the
-     * hashcode of an object the JVM makes a call to the very method and whatever the methode returns it
+    /*
+     * The below method exists in the "Object.java" file by default, And when we try
+     * to print the
+     * hashcode of an object the JVM makes a call to the very method and whatever
+     * the methode returns it
      * will be get printed in the console.
      *
      * The default state of the method is:
      *
      * public String toString() {
-        return getClass().getName() + "@" + Integer.toHexString(hashCode());
-       }
+     * return getClass().getName() + "@" + Integer.toHexString(hashCode());
+     * }
      *
      * since there is another "toString()" methode exists in the "Car" class,
      * JVM will call this method instead
      * So whatever the method returns will get printed on the console...
      */
 
-    public String toString () {
+    public String toString() {
         return "Make: " + this.make + ".\n"
-                +  "Price: " + (int) this.price + " $.\n"
-                +  "Year: " + this.year + ".\n"
-                +  "Color: " + this.color + ".\n"
-                +  "Parts: " + Arrays.toString(parts) + ".\n";
+                + "Price: " + (int) this.price + " $.\n"
+                + "Year: " + this.year + ".\n"
+                + "Color: " + this.color + ".\n"
+                + "Parts: " + Arrays.toString(parts) + ".\n";
     }
 }

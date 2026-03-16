@@ -1,4 +1,4 @@
-package OOP.Section03;
+package OOP.ClassObj.Section03;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -10,21 +10,21 @@ public class Contact {
     private String birthDate;
     private int age;
 
-    public Contact (String name, String phoneNumber, String birthDate) {
+    public Contact(String name, String phoneNumber, String birthDate) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.birthDate = birthDate;
-        this.age = toAge (birthDate);
+        this.age = toAge(birthDate);
     }
 
-    public Contact (Contact source) {
+    public Contact(Contact source) {
         this.name = source.name;
         this.phoneNumber = source.phoneNumber;
         this.birthDate = source.birthDate;
-        this.age = toAge (source.birthDate);
+        this.age = toAge(source.birthDate);
     }
 
-    //getters
+    // getters
     public String getName() {
         return name;
     }
@@ -41,32 +41,33 @@ public class Contact {
         return age;
     }
 
-    //setter
-    public void setName (String name) {
+    // setter
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setPhoneNumber (String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setBirthDate (String birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
-        setAge (toAge (birthDate));
+        setAge(toAge(birthDate));
     }
 
-    private void setAge (int age) {
+    private void setAge(int age) {
         this.age = age;
     }
 
     private int toAge(String dateOfBirth) {
-        LocalDate parsedBirthDate = LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern ("dd/MM/yyyy"));
+        LocalDate parsedBirthDate = LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         LocalDate currentDate = LocalDate.now();
-        Period period = Period.between (parsedBirthDate, currentDate);
+        Period period = Period.between(parsedBirthDate, currentDate);
         return period.getYears();
     }
 
     public String toString() {
-        return "Name: " + this.getName() + "\nPhoneNumber: " + this.getPhoneNumber() + "\nBirthDate: " + this.getBirthDate() + "\nAge: " + this.getAge();
+        return "Name: " + this.getName() + "\nPhoneNumber: " + this.getPhoneNumber() + "\nBirthDate: "
+                + this.getBirthDate() + "\nAge: " + this.getAge();
     }
 }

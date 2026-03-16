@@ -1,18 +1,20 @@
-package OOP.Section01;
+package OOP.ClassObj.Section01;
 
 public class Dealership {
 
     private Car[] cars;
 
-    //Deep copy: Where we create new objects to store the values of the other objects (Mainly in case of a copy constructor) to counter the "reference trap".
-    public Dealership (Car[] cars) {
-        this.cars = new Car [cars.length];
+    // Deep copy: Where we create new objects to store the values of the other
+    // objects (Mainly in case of a copy constructor) to counter the "reference
+    // trap".
+    public Dealership(Car[] cars) {
+        this.cars = new Car[cars.length];
         for (int i = 0; i < this.cars.length; i++) {
-            this.cars[i] = new Car (cars[i]);
+            this.cars[i] = new Car(cars[i]);
         }
     }
 
-    public void sell (int index) {
+    public void sell(int index) {
         this.cars[index].buyCar();
     }
 

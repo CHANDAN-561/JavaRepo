@@ -1,4 +1,4 @@
-package OOP.Section02;
+package OOP.ClassObj.Section02;
 
 public class Store {
     private Movie[] movies;
@@ -7,11 +7,11 @@ public class Store {
         this.movies = new Movie[10];
     }
 
-    public Movie getMovie (int index) {
+    public Movie getMovie(int index) {
         return movies[index];
     }
 
-    public void setMovie (int index, Movie movies) {
+    public void setMovie(int index, Movie movies) {
         this.movies[index] = movies;
     }
 

@@ -1,4 +1,4 @@
-package OOP.Section03;
+package OOP.ClassObj.Section03;
 
 public class ContactManager {
     private Contact[] contacts;

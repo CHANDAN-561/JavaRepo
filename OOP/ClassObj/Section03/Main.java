@@ -1,4 +1,4 @@
-package OOP.Section03;
+package OOP.ClassObj.Section03;
 
 import java.util.Scanner;
 
