@@ -14,6 +14,7 @@ public class arrayList {
         // the Java's error detection feature because it can hold any kind of objects.
 
         // eg: List values = new ArrayList<>();
+        @SuppressWarnings("unused")
         List<Integer> numbers = new ArrayList<>();
         // It is a good practice to mention the class of the objects you are holding
         // inside
