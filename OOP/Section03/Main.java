@@ -5,6 +5,12 @@ import java.util.Scanner;
 public class Main {
     static Scanner scan = new Scanner(System.in);
 
+    @SuppressWarnings("unused") // suppresses the "unused" warning for the entire method
+    public static void copyContacts(Contact[] contactList) {
+        Contact copyContact1 = new Contact(contactList[0]);
+        Contact copyContact2 = new Contact(contactList[1]);
+    }
+
     public static void main(String[] args) {
 
         // For Contact class
@@ -15,8 +21,9 @@ public class Main {
                 new Contact("Harry osborn", "+91 9938373508", "25/07/1990")
         };
 
-        Contact copyContact1 = new Contact(contactList[0]);
-        Contact copyContact2 = new Contact(contactList[1]);
+        copyContacts(contactList);
+        // the modulerized code is just to remove the warnings of the copy constructor
+        // line.
 
         for (Contact contact : contactList) {
             System.out.println("\n" + contact);
@@ -52,11 +59,11 @@ public class Main {
         System.out.print("If you wish to edit the details of any contact, type 'continue': ");
         String choice = scan.next();
 
-        //looped edit contact block
+        // looped edit contact block
         while (choice.equals("continue")) {
             System.out.print("\nEnter the index you want to change the contact of: ");
             int index = scan.nextInt() - 1;
-            //scan.nextInt();                         //this is to clear the input buffer...
+            // scan.nextInt(); //this is to clear the input buffer...
             System.out.println("\nYou are changing the details of the following contact...");
             System.out.println(newContactManager.getContact(index));
 
@@ -79,15 +86,16 @@ public class Main {
 
         scan.close();
     }
+
     public static Contact updateContactDetails() {
         scan.nextLine();
         System.out.print("\nEnter new Name: ");
         String name = scan.nextLine();
-        System.out.print("\nEnter new Phone Number:" );
+        System.out.print("\nEnter new Phone Number:");
         String phoneNumber = scan.nextLine();
         System.out.print("\nEnter new BirthDate (dd/MM/yyyy): ");
         String birthDate = scan.nextLine();
-        return new Contact (name, phoneNumber, birthDate);
+        return new Contact(name, phoneNumber, birthDate);
     }
 
     public static Contact[] contactData() {
