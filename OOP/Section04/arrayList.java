@@ -9,11 +9,11 @@ public class arrayList {
         Scanner scan = new Scanner(System.in);
 
         List<Integer> numberlist = new ArrayList<>();
-        // we can create lists using only the "List" keyword it just creates a list 
+        // we can create lists using only the "List" keyword it just creates a list
         // without any class type checkings. It is not recomended since it can bypass
         // the Java's error detection feature because it can hold any kind of objects.
 
-        // eg: List values = new ArrayList();
+        // eg: List values = new ArrayList<>();
         List<Integer> numbers = new ArrayList<>();
         // It is a good practice to mention the class of the objects you are holding
         // inside
